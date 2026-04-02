@@ -4,6 +4,10 @@ An assembler for the Hack assembly language written in Python, built as part of 
 
 Translates `.asm` files written in the Hack assembly language into `.hack` binary files that can be executed on the Hack computer platform.
 
+## Instruction Format
+
+![ISF](isf-diagram.png)
+
 ## Usage
 
 ```bash
@@ -32,6 +36,7 @@ hack-assembler/
 ├── code.py           # Translates mnemonics to binary
 ├── parser.py         # Parses .asm files into commands
 ├── symbol_table.py   # Manages labels and variables
+├── isf-diagram.png   # Detailed instruction format diagram
 └── examples/
     ├── Fill.asm
     ├── Fill.hack
