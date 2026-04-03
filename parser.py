@@ -4,15 +4,15 @@ class Parser:
     def __init__(self, file):
         self.line_count = 0
         self.instr = None
+        self.asm = []
         
         with open(file) as stream:
-            self.asm = []
             for line in stream.read().split("\n"):
                 line = line.split("//")[0].strip()
                 if line: 
                     self.asm.append(line)
              
-    def more_commands(self):
+    def more_lines(self):
         return self.line_count < len(self.asm)
         
     def advance(self):

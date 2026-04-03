@@ -36,7 +36,7 @@ hack-assembler/
 ├── code.py           # Translates mnemonics to binary
 ├── parser.py         # Parses .asm files into commands
 ├── symbol_table.py   # Manages labels and variables
-├── isf-diagram.png   # Detailed instruction format diagram
+├── isf-diagram.png   # Instruction format diagram
 └── examples/
     ├── Fill.asm
     ├── Fill.hack

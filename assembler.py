@@ -11,7 +11,7 @@ def main():
     line_count = 0
     
     parser = Parser(file_in)
-    while parser.more_commands():
+    while parser.more_lines():
         parser.advance()
         if parser.command_type() == "A_COMMAND" or parser.command_type() == "C_COMMAND":
             line_count += 1
@@ -21,7 +21,7 @@ def main():
     parser = Parser(file_in)
     free_addr = 16
     with open(file_in[:-4]+".hack", "w") as file_out:
-        while parser.more_commands():
+        while parser.more_lines():
             parser.advance()
             
             if parser.command_type() == "A_COMMAND":
@@ -35,7 +35,7 @@ def main():
                         free_addr += 1
                 binary = bin(int(transl))
                 bin_str = str(binary)[2:].zfill(16)
-                if parser.more_commands():
+                if parser.more_lines():
                     file_out.write(bin_str + "\n")
                 else:
                     file_out.write(bin_str)
@@ -45,7 +45,7 @@ def main():
                 comp = Code.comp(parser.comp())
                 jump = Code.jump(parser.jump())
                 bin_str = "111" + comp + dest + jump
-                if parser.more_commands():
+                if parser.more_lines():
                     file_out.write(bin_str + "\n")
                 else:
                     file_out.write(bin_str)
