@@ -4,10 +4,6 @@ An assembler for the Hack assembly language written in Python, built as part of 
 
 Translates `.asm` files written in the Hack assembly language into `.hack` binary files that can be executed on the Hack computer platform.
 
-## Instruction Format
-
-![ISF](isf-diagram.png)
-
 ## Usage
 
 ```bash
@@ -28,6 +24,12 @@ python assembler.py Mult.asm   # produces Mult.hack
 - `Fill.asm` - listens to keyboard input, blackening the screen when a key is pressed and clearing it when released
 - `Mult.asm` - computes the product of two numbers via repeated addition
 
+## Instruction Format
+
+![ISF](isf-diagram.png)
+
+*Original diagram.*
+
 ## Project Structure
 
 ```
@@ -38,9 +40,5 @@ hack-assembler/
 ├── symbol_table.py   # Manages labels and variables
 ├── isf-diagram.png   # Instruction format diagram
 └── examples/
-    ├── Fill.asm
-    ├── Fill.hack
-    ├── Mult.asm
-    └── Mult.hack
 ```
 
